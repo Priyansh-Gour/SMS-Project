@@ -11,11 +11,13 @@ let deleteUser = async (e) => {
     body: JSON.stringify({
       id: userid,
     }),
-  }).then((response) => {
-    return response.json()
-  }).then((data) => {
-    alert(data.msg)
-  });
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      alert(data.msg);
+    });
 };
 
 fetch("http://localhost:5000/api/numbers/getnumbers", {
@@ -33,12 +35,12 @@ fetch("http://localhost:5000/api/numbers/getnumbers", {
       let td1 = document.createElement("td");
       let td2 = document.createElement("td");
       let td3 = document.createElement("td");
-      // td3.onclick = a;
 
       td3.style.textAlign = "center";
       td1.innerHTML = `${element.name}`;
       td2.innerHTML = `${element.phone_number}`;
-      td3.innerHTML = `<img src="image/delete-icon.png" onclick="deleteUser(this)" id="${element.phone_number}" class='delete-icon'>`;
+      //   td3.innerHTML = `<img src="image/delete-icon.png" onclick="deleteUser(this)" id="${element.phone_number}" class='delete-icon'>`;
+      td3.innerHTML = `<i class="fa-solid fa-trash delete-icon" onclick="deleteUser(this)" id="${element.phone_number}"></i>`;
 
       newElem.append(td1);
       newElem.append(td2);
