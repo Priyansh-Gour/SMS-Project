@@ -34,4 +34,13 @@ router.post("/createnumber", async (req, res) => {
   }
 });
 
+router.delete('/deletenumber' , async (req , res) => {
+  try {
+    await Number_Model.deleteOne({phone_number:req.body.id});
+    res.status(200).send({msg : "Number deleted from the database."})
+  } catch (error) {
+    res.status(400).send(error);
+  }
+})
+
 module.exports = router;
