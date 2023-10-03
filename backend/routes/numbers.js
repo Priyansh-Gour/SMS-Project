@@ -14,7 +14,7 @@ router.get("/getnumbers", async (req, res) => {
 
 router.post("/createnumber", async (req, res) => {
   try {
-    let existingNum = await Number_Model.find(req.body.phone_number);
+    let existingNum = await Number_Model.findOne({phone_number:req.body.phone_number});
     if (existingNum) {
       res.status(400).send({msg:"Number already existed."});
     }
@@ -27,7 +27,7 @@ router.post("/createnumber", async (req, res) => {
             phone_number: req.body.phone_number
         })
         await newUser.save();
-        res.send(200).send({msg:"Number saved successfully."})
+        res.status(200).send({msg:"Number saved successfully."})
     }
   } catch (error) {
     res.status(400).send(error);
