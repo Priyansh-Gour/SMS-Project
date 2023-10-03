@@ -8,6 +8,7 @@ const numberSchema = new mongoose.Schema({
   phone_number: {
     type: String,
     required: [true, "Phone no. is required"],
+    unique:true
   },
 });
 
