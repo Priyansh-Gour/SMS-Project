@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    color: white;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a{
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+/* .home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.home-sci::before{
+    content: '';
+    position: absolute;
+    align-items: center;
+    top:0px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2s;
+    z-index: 2;
+} */
+.send{
+height: 110vh;
+background:linear-gradient(rgba(0,0,0,0.5),#6ae9dd) ,url('background.jpg');
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+padding: 0 10%;
+}
+
+
+
+.container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid black;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 0px;
+    padding: 20px;
+    background-color:transparent;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background-color: aliceblue;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #0b0a0a;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* .header a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    border: 2px solid rgb(63, 65, 46);
+    border-radius: 50%;
+    background: transparent;
+    font-size: 20px;
+    color: rgb(54, 103, 162);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.header a:hover{
+    color: #976ca9;
+}
+.header a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    transition:.5s ;
+}
+
+.header a:hover::before{
+    width: 100%;
+
+
+} */
+
+.header a{
+    position: relative;
+    display :inline-flex ;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    background: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 1ms;
+}
+.header a:hover{
+    color: white;
+}
+/* .header a:nth-child(2){
+    background: transparent;
+    color: white;
+
+} */
+.header a:nth-child(2):hover{
+    color: #081b29;
+}
+
+/* .header a:nth-child(2)::before {
+    background: #00abf0;
+} */
+.header a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    transition: .5s;
+
+}
+
+.header a:hover::before{
+    width: 100%;
+
+}
+
+
+.details-div{
+    padding: 5vh 3vw;
+    height: 60vh;
+    overflow-y: auto;
+    box-shadow: 1px 1px 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+}
+
+.details-div h1{
+    font-family: cursive;
+    margin-bottom: 5vh;
+}
+
+#recList{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+#recList tr:first-child{
+    background-color: white;
+    color: black;
+}
+
+#recList td{
+    padding: 1vh 1vw;
+}
+
+.delete-icon{
+    transition: all .2s ease;
+    -webkit-text-stroke: 1px black;
+    filter: invert();
+}
+
+.delete-icon:hover{
+    color: firebrick;
+    cursor: pointer;
+}

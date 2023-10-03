@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <title>Document</title>
+    
+    <!-- cdn for icon -->
+    <script
+    src="https://kit.fontawesome.com/a0c4a34828.js"
+    crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html"><i class="fa-solid fa-message"></i></a>
+      <nav class="navbar">
+        <a href="Addcontact.html"><i class="fa-solid fa-address-book"></i></a>
+      </nav>
+    </header>
+    <section class="send">
+      <div class="container">
+        <h1>Send a Message</h1>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="senderName">Your Name:</label>
+            <input type="text" id="senderName" name="senderName" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <input type="submit" value="Send Message" />
+        </form>
+      </div>
+      <div class="details-div">
+        <h1>Recipients Details :-</h1>
+        <table id="recList" border="1">
+          <tr>
+            <td><strong>Name</strong></td>
+            <td><strong>Phone Number</strong></td>
+            <td><strong>Delete</strong></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <script src="sms.js"></script>
+  </body>
+  </html>
+  
