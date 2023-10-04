@@ -1,6 +1,7 @@
 const express = require("express");
 const Number_model = require("./models/numbers")
 const Number_route = require("./routes/numbers")
+const Msg_route = require("./routes/sendmsg")
 // const mongoose = require("mongoose")
 const connectToDatabase = require("./db")
 const cors = require('cors');
@@ -14,6 +15,7 @@ app.use(cors());
 app.use(express.urlencoded({extended:false}));
 
 app.use('/api/numbers', Number_route)
+app.use('/api/', Msg_route)
 
 connectToDatabase();
 
