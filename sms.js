@@ -70,6 +70,8 @@ sendMsg.addEventListener("submit", async (e) => {
     })
     .then((data) => {
       alert(data.msg);
+      nameInp.value = "";
+      msgInp.value = "";
     });
 });
 
