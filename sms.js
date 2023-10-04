@@ -49,25 +49,35 @@ fetch("http://localhost:5000/api/numbers/getnumbers", {
     });
   });
 
-
 const sendMsg = document.getElementById("sendMsg");
 let nameInp = document.getElementById("senderName");
 let msgInp = document.getElementById("message");
 
-sendMsg.addEventListener('submit' , async (e) => {
+sendMsg.addEventListener("submit", async (e) => {
   e.preventDefault();
   await fetch("http://localhost:5000/api/sendmsg", {
-    method:'POST',
-    headers:{
-      'Content-Type':'application/json'
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       title: nameInp.value,
-      msg: msgInp.value
+      msg: msgInp.value,
+    }),
+  })
+    .then((response) => {
+      return response.json();
     })
-  }).then((response) => {
-    return response.json();
-  }).then((data) => {
-    alert(data.msg)
-  });
-})
+    .then((data) => {
+      alert(data.msg);
+    });
+});
+
+let frontPage = document.getElementById("frontPage");
+
+const startBtn = () => {
+  frontPage.style.opacity = "0";
+  setInterval(() => {
+    frontPage.style.display = "none";
+  }, 501);
+};

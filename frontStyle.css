@@ -7,13 +7,17 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
+    width: 100vw;
+    z-index: 4;
+    position: absolute;
+    transition:all .5s ease-in-out;
 }
 .message{
     text-align: center;
     color: white;
     padding-top: 150px;
 }
-h1{
+#frontPage h1{
     font-size: 100px;
 }
 .message p{

@@ -6,6 +6,7 @@
 }
 body{
     color: white;
+    overflow: hidden;
 }
 .header{
     position: fixed;
@@ -50,7 +51,7 @@ body{
     z-index: 2;
 } */
 .send{
-height: 110vh;
+height: 100vh;
 background:linear-gradient(rgba(0,0,0,0.5),#6ae9dd) ,url('background.jpg');
 background-size: cover;
 background-position: center;
@@ -75,6 +76,11 @@ padding: 0 10%;
 
 h1 {
     text-align: center;
+}
+
+.container h1{
+    margin-bottom: 4vh;
+    font-family: cursive;
 }
 
 label {
