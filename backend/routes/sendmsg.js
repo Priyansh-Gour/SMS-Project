@@ -22,7 +22,6 @@ router.post('/sendmsg' , async (request , respon) => {
               userNumbers += `${element.phone_number},`;
             });
             userNumbers = userNumbers.substring(0, userNumbers.length - 1);
-            console.log(userNumbers);
             req.query({
               authorization:
                 "1xDuY7CKoyP5GUOZLT6ItqizHJREkjgBSw0Q8nsmvra3Fdpec4HgSP6s5mGXvFd9piAyIaD84lwMjtc3",
